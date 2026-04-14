@@ -1,0 +1,54 @@
+{
+  "name": "fnexthealth",
+  "displayName": "Extension Health Monitor",
+  "description": "Audit your installed VS Code extensions for security risks, staleness, and health.",
+  "version": "0.1.0",
+  "publisher": "fnrhombus",
+  "license": "MIT",
+  "author": "fnrhombus",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fnrhombus/fnexthealth"
+  },
+  "bugs": {
+    "url": "https://github.com/fnrhombus/fnexthealth/issues"
+  },
+  "homepage": "https://github.com/fnrhombus/fnexthealth#readme",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "keywords": [
+    "security",
+    "extensions",
+    "audit",
+    "health",
+    "monitor",
+    "stale",
+    "abandoned",
+    "vulnerability"
+  ],
+  "activationEvents": [],
+  "main": "./dist/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "fnexthealth.audit",
+        "title": "Audit Extension Health",
+        "category": "Extension Health"
+      }
+    ]
+  },
+  "scripts": {
+    "build": "tsup",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.85.0",
+    "@types/node": "^22.0.0",
+    "tsup": "^8.3.0",
+    "typescript": "^5.6.0"
+  }
+}
